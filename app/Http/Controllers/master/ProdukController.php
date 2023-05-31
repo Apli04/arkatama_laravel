@@ -22,7 +22,7 @@ class ProdukController extends Controller
             'mouse'
         ];
 
-        return view('master.product');
+        return view('master.product',compact('nama'));
     }
 
     public function productlist()

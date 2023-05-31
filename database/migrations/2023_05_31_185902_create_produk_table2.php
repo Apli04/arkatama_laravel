@@ -11,21 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('order', function (Blueprint $table) {
+        Schema::create('produk_table2', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('customer_id')->constrained('customer');
-            $table->date('tanggal_order');
-            $table->integer('jumlah_total');
+            $table->string('nama', 100);
+            $table->string('deskripsi', 100);
+            $table->integer('harga');
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     * 
      */
     public function down(): void
     {
-        Schema::dropIfExists('order');
+        Schema::dropIfExists('produk_table2');
     }
 };
